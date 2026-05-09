@@ -343,6 +343,28 @@
             font-weight: 600;
         }
 
+        .btn-doc {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep));
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+            margin-top: 1.5rem;
+        }
+
+        .btn-doc:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.45);
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--rose-deep), var(--circuit-purple));
@@ -519,9 +541,12 @@
         <!-- Resultados -->
         <section id="resultados">
             <h2>Resultados de la Pulsera</h2>
-            <p style="font-size: 1.1rem; color: var(--text-soft); margin-bottom: 2rem;">
+            <p style="font-size: 1.1rem; color: var(--text-soft); margin-bottom: 1rem;">
                 Aquí puedes ver el funcionamiento real de la pulsera wearable en acción. 💕✨
             </p>
+            <a href="reporte_pulsera_rosa.pdf" target="_blank" class="btn-doc">
+                📄 Documentación
+            </a>
             <div class="videos-grid">
                 <div class="video-card">
                     <video controls preload="metadata">
