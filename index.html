@@ -308,60 +308,39 @@
             font-weight: 500;
         }
 
-        /* Upload Section */
-        .upload-area {
+        /* Videos Section */
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .video-card {
             background: var(--white);
-            border: 3px dashed var(--rose-secondary);
             border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 107, 157, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .upload-area:hover {
-            border-color: var(--rose-primary);
-            background: var(--rose-light);
-            transform: scale(1.02);
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.25);
         }
 
-        .upload-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--rose-primary), var(--circuit-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .video-card video {
+            width: 100%;
+            display: block;
+            border-radius: 20px 20px 0 0;
         }
 
-        .upload-area h3 {
+        .video-caption {
+            padding: 1.2rem 1.5rem;
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 1.3rem;
             color: var(--rose-deep);
-            margin-bottom: 0.5rem;
-        }
-
-        .upload-area p {
-            color: var(--text-soft);
-            margin-bottom: 1.5rem;
-        }
-
-        button {
-            background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep));
-            color: var(--white);
-            border: none;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            font-size: 1rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
         }
 
         /* Footer */
@@ -443,7 +422,7 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#documentacion">Documentación</a></li>
-            <li><a href="#subir">Subir</a></li>
+            <li><a href="#resultados">Resultados</a></li>
         </ul>
     </nav>
 
@@ -537,18 +516,26 @@
             </div>
         </section>
 
-        <!-- Subir -->
-        <section id="subir">
-            <h2>Agregar Nueva Práctica</h2>
-            <div class="upload-area" onclick="alert('¡Para agregar proyectos, edita el archivo index.html y añade nuevas tarjetas en la sección de proyectos! 💕')">
-                <div class="upload-icon">📤</div>
-                <h3>Sube tu nueva documentación</h3>
-                <p>Arrastra archivos aquí o haz clic para seleccionar</p>
-                <button>Seleccionar archivos</button>
-            </div>
-            <p style="margin-top: 2rem; color: var(--text-soft); text-align: center; font-size: 0.95rem;">
-                💡 Tip: Puedes agregar nuevos proyectos editando el código HTML y creando nuevas tarjetas
+        <!-- Resultados -->
+        <section id="resultados">
+            <h2>Resultados de la Pulsera</h2>
+            <p style="font-size: 1.1rem; color: var(--text-soft); margin-bottom: 2rem;">
+                Aquí puedes ver el funcionamiento real de la pulsera wearable en acción. 💕✨
             </p>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="videos/pulsera1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Demostración 1 — Pulsera en funcionamiento</div>
+                </div>
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="videos/pulsera2.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Demostración 2 — Pulsera en funcionamiento</div>
+                </div>
+            </div>
         </section>
     </div>
 
