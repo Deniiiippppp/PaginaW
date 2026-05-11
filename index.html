@@ -410,6 +410,58 @@
             box-shadow: 0 10px 30px rgba(255, 107, 157, 0.45);
         }
 
+        /* Final Project Card */
+        .project-card.proyecto-final {
+            border: 2px solid var(--rose-primary);
+            box-shadow: 0 10px 40px rgba(255, 107, 157, 0.3);
+        }
+
+        .project-card.proyecto-final .project-image {
+            background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep), var(--circuit-purple));
+        }
+
+        .proyecto-final-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep));
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .docs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
+        }
+
+        .btn-card-doc-sm {
+            background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep));
+            color: var(--white);
+            padding: 0.4rem 0.9rem;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(255, 107, 157, 0.25);
+            width: fit-content;
+        }
+
+        .btn-card-doc-sm:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 14px rgba(255, 107, 157, 0.4);
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--rose-deep), var(--circuit-purple));
@@ -587,6 +639,34 @@
                         </p>
                         <div class="tags">
                             <span class="tag">Por definir</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto Final -->
+                <div class="project-card proyecto-final">
+                    <div class="project-image">👗</div>
+                    <div class="project-content">
+                        <span class="proyecto-final-badge">★ Proyecto Final</span>
+                        <h3 class="project-title">Hoodie Wearable</h3>
+                        <p class="project-date">Proyecto Final • 2026</p>
+                        <p class="project-description">
+                            Hoodie con tecnología wearable integrada: circuitos, LEDs y sensores
+                            bordados directamente en la prenda. Documentación completa del proceso
+                            de diseño, fabricación y funcionamiento.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Proyecto Final</span>
+                            <span class="tag">Hoodie</span>
+                            <span class="tag">Wearable</span>
+                            <span class="tag">Diseño</span>
+                        </div>
+                        <div class="docs-list">
+                            <a href="documentacion_proyecto_final_v2.pdf" target="_blank" class="btn-card-doc-sm">📄 Documentación Principal</a>
+                            <a href="como_funciona_la_hoodie.pdf" target="_blank" class="btn-card-doc-sm">⚡ Cómo Funciona la Hoodie</a>
+                            <a href="instructivo.pdf" target="_blank" class="btn-card-doc-sm">📋 Instructivo</a>
+                            <a href="marca_bocetos.pdf" target="_blank" class="btn-card-doc-sm">✏️ Marca y Bocetos</a>
+                            <a href="poster_infografia.pdf" target="_blank" class="btn-card-doc-sm">🖼️ Poster / Infografía</a>
                         </div>
                     </div>
                 </div>
